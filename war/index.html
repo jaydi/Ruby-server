@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>RubyMine</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.form.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=init"></script>
+</head>
+<body>
+    
+    <section id="mine-container">
+        
+        <div id="mine-header">
+            <select id="select-zone">
+                <option value="0">- -</option>
+            </select>
+            <select id="select-mine">
+                <option value="0">- -</option>
+            </select>
+            <div class="select_progress"></div>
+        </div>
+        
+        <div data-brackets-id='21' id="mine-info">
+            상점명: <input type="text" id="mine-info-title"><br>
+            카테고리 : <input type="text" id="mine-info-category"><br>
+            주소 : <input type="text" class="long" id="mine-info-address"><br>
+            위도 : <input type="text" id="mine-info-lat"><br>
+            경도 : <input type="text"  id="mine-info-lon"><br>
+            전화번호 : <input type="text"  id="mine-info-tel"><br>
+            운영시간 : <input type="text" class="long"  id="mine-info-workhour"><br>
+            메뉴 : <input type="text" class="long"  id="mine-info-menu"><br>
+            <button id="mine-info-edit" onclick="editMineInfo()" type="button" class="btn btn-default">수정</button>
+        </div>
+        
+        <div id="mine-viewer">
+            <button id="mine-contents-add-first" onclick="addMineItemByTextIdx(-1)" type="button" class="btn btn-default">맨위에 추가</button>
+            <div id="mine-contents-view"></div>
+            <button id="mine-contents-edit" onclick="editMineContents(0)" type="button" class="btn btn-default">새로 꾸미기</button>
+        </div>
+        
+        <div id="mine-editor">
+            <div id="mine-editor-view"></div>
+            <button id="mine-contents-add" onclick="addMineContent()" type="button" class="btn btn-default">Add Content</button>
+            <button id="mine-contents-save" onclick="saveMineContents()" type="button" class="btn btn-default">Save</button>
+            <button id="mine-contents-cancel" onclick="cancelMineEdit()" type="button" class="btn btn-default">Cancel</button>
+            <button id="mine-contents-done" onclick="addMineContentItem()" type="button" class="btn btn-default">Done</button>
+        </div>
+        
+        <div id="mine-gem-viewer">
+            <div id="mine-gem-view"></div>
+            <button id="mine-gem-edit" onclick="editMineGems()" type="button" class="btn btn-default">Add Gem</button>
+        </div>
+        
+        <div id="mine-gem-editor">
+            <div id="mine-gem-editor-view"></div>
+            <button id="mine-contents-add" onclick="addMineGem()" type="button" class="btn btn-default">More Gem</button>
+            <button id="mine-gem-save" onclick="saveMineGems()" type="button" class="btn btn-default">Save</button>
+            <button id="mine-gem-cancel" onclick="cancelGemEdit()" type="button" class="btn btn-default">Cancel</button>
+        </div>
+    </section>
+    
+    <footer class="footer"></footer>
+</body>
+</html>

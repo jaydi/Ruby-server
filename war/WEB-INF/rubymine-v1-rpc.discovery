@@ -1,0 +1,1565 @@
+{
+ "kind": "discovery#rpcDescription",
+ "etag": "\"9mnLCPwbyZOHH18t8ExzO2gqgTk/2vInvg893oUcctRVsJOVf-wW5fc\"",
+ "discoveryVersion": "v1",
+ "id": "rubymine:v1",
+ "name": "rubymine",
+ "version": "v1",
+ "description": "This is an API",
+ "icons": {
+  "x16": "http://www.google.com/images/icons/product/search-16.gif",
+  "x32": "http://www.google.com/images/icons/product/search-32.gif"
+ },
+ "protocol": "rpc",
+ "rootUrl": "https://ruby-mine.appspot.com/_ah/api/",
+ "rpcUrl": "https://ruby-mine.appspot.com/_ah/api/rpc",
+ "rpcPath": "/_ah/api/rpc",
+ "parameters": {
+  "alt": {
+   "type": "string",
+   "description": "Data format for the response.",
+   "default": "json",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query"
+  },
+  "fields": {
+   "type": "string",
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query"
+  },
+  "key": {
+   "type": "string",
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query"
+  },
+  "oauth_token": {
+   "type": "string",
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query"
+  },
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "Returns response with indentations and line breaks.",
+   "default": "true",
+   "location": "query"
+  },
+  "quotaUser": {
+   "type": "string",
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query"
+  },
+  "userIp": {
+   "type": "string",
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "Coupon": {
+   "id": "Coupon",
+   "type": "object",
+   "properties": {
+    "desc": {
+     "type": "string"
+    },
+    "expirationDate": {
+     "type": "string",
+     "format": "int64"
+    },
+    "gemId": {
+     "type": "string",
+     "format": "int64"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "imageKey": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "rubymineName": {
+     "type": "string"
+    },
+    "state": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "userId": {
+     "type": "string",
+     "format": "int64"
+    }
+   }
+  },
+  "CouponCol": {
+   "id": "CouponCol",
+   "type": "object",
+   "properties": {
+    "coupons": {
+     "type": "array",
+     "items": {
+      "$ref": "Coupon"
+     }
+    },
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    }
+   }
+  },
+  "Gem": {
+   "id": "Gem",
+   "type": "object",
+   "properties": {
+    "desc": {
+     "type": "string"
+    },
+    "ea": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "imageKey": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "rubymineId": {
+     "type": "string",
+     "format": "int64"
+    },
+    "rubymineName": {
+     "type": "string"
+    },
+    "type": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "value": {
+     "type": "integer",
+     "format": "int32"
+    }
+   }
+  },
+  "GemCol": {
+   "id": "GemCol",
+   "type": "object",
+   "properties": {
+    "gems": {
+     "type": "array",
+     "items": {
+      "$ref": "Gem"
+     }
+    },
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    }
+   }
+  },
+  "Log": {
+   "id": "Log",
+   "type": "object",
+   "properties": {
+    "createdAt": {
+     "type": "string",
+     "format": "int64"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "kind": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "refer": {
+     "type": "string",
+     "format": "int64"
+    },
+    "targetId": {
+     "type": "string",
+     "format": "int64"
+    },
+    "type": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "userId": {
+     "type": "string",
+     "format": "int64"
+    }
+   }
+  },
+  "LogCol": {
+   "id": "LogCol",
+   "type": "object",
+   "properties": {
+    "logs": {
+     "type": "array",
+     "items": {
+      "$ref": "Log"
+     }
+    }
+   }
+  },
+  "MineInfo": {
+   "id": "MineInfo",
+   "type": "object",
+   "properties": {
+    "address": {
+     "type": "string"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "lat": {
+     "type": "number",
+     "format": "double"
+    },
+    "lng": {
+     "type": "number",
+     "format": "double"
+    },
+    "menu": {
+     "type": "string"
+    },
+    "phone": {
+     "type": "string"
+    },
+    "price": {
+     "type": "string"
+    },
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "time": {
+     "type": "string"
+    }
+   }
+  },
+  "MineInfoCol": {
+   "id": "MineInfoCol",
+   "type": "object",
+   "properties": {
+    "mineInfos": {
+     "type": "array",
+     "items": {
+      "$ref": "MineInfo"
+     }
+    }
+   }
+  },
+  "Receipt": {
+   "id": "Receipt",
+   "type": "object",
+   "properties": {
+    "createdAt": {
+     "type": "string",
+     "format": "int64"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "menus": {
+     "type": "string"
+    },
+    "price": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "shopId": {
+     "type": "string",
+     "format": "int64"
+    },
+    "userId": {
+     "type": "string",
+     "format": "int64"
+    }
+   }
+  },
+  "Ruby": {
+   "id": "Ruby",
+   "type": "object",
+   "properties": {
+    "createdAt": {
+     "type": "string",
+     "format": "int64"
+    },
+    "event": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "giverId": {
+     "type": "string",
+     "format": "int64"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "planterId": {
+     "type": "string",
+     "format": "int64"
+    },
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "userId": {
+     "type": "string",
+     "format": "int64"
+    },
+    "value": {
+     "type": "number",
+     "format": "float"
+    }
+   }
+  },
+  "RubyCol": {
+   "id": "RubyCol",
+   "type": "object",
+   "properties": {
+    "givers": {
+     "type": "array",
+     "items": {
+      "$ref": "Rubymine"
+     }
+    },
+    "planter": {
+     "$ref": "Rubymine"
+    },
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "rubies": {
+     "type": "array",
+     "items": {
+      "$ref": "Ruby"
+     }
+    }
+   }
+  },
+  "Rubymine": {
+   "id": "Rubymine",
+   "type": "object",
+   "properties": {
+    "contents": {
+     "$ref": "Text"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "name": {
+     "type": "string"
+    },
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "ruby": {
+     "type": "number",
+     "format": "float"
+    },
+    "rubyzoneId": {
+     "type": "string",
+     "format": "int64"
+    },
+    "type": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "typeString": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number",
+     "format": "float"
+    }
+   }
+  },
+  "RubymineCol": {
+   "id": "RubymineCol",
+   "type": "object",
+   "properties": {
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "rubymines": {
+     "type": "array",
+     "items": {
+      "$ref": "Rubymine"
+     }
+    }
+   }
+  },
+  "Rubyzone": {
+   "id": "Rubyzone",
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "lat": {
+     "type": "number",
+     "format": "double"
+    },
+    "lng": {
+     "type": "number",
+     "format": "double"
+    },
+    "name": {
+     "type": "string"
+    },
+    "range": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    }
+   }
+  },
+  "RubyzoneCol": {
+   "id": "RubyzoneCol",
+   "type": "object",
+   "properties": {
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "rubyzones": {
+     "type": "array",
+     "items": {
+      "$ref": "Rubyzone"
+     }
+    }
+   }
+  },
+  "Text": {
+   "id": "Text",
+   "type": "object",
+   "properties": {
+    "value": {
+     "type": "string"
+    }
+   }
+  },
+  "User": {
+   "id": "User",
+   "type": "object",
+   "properties": {
+    "bday": {
+     "type": "string",
+     "format": "int64"
+    },
+    "email": {
+     "type": "string"
+    },
+    "gender": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "imageKey": {
+     "type": "string"
+    },
+    "level": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "name": {
+     "type": "string"
+    },
+    "paired": {
+     "type": "boolean"
+    },
+    "password": {
+     "type": "string"
+    },
+    "phone": {
+     "type": "string"
+    },
+    "regId": {
+     "type": "string"
+    },
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "ruby": {
+     "type": "number",
+     "format": "float"
+    },
+    "socialId": {
+     "type": "string",
+     "format": "int64"
+    },
+    "state": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "type": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "verCode": {
+     "type": "integer",
+     "format": "int32"
+    }
+   }
+  },
+  "UserCol": {
+   "id": "UserCol",
+   "type": "object",
+   "properties": {
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "users": {
+     "type": "array",
+     "items": {
+      "$ref": "User"
+     }
+    }
+   }
+  },
+  "Userpair": {
+   "id": "Userpair",
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "state": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "userIdA": {
+     "type": "string",
+     "format": "int64"
+    },
+    "userIdB": {
+     "type": "string",
+     "format": "int64"
+    },
+    "userImageKeyA": {
+     "type": "string"
+    },
+    "userImageKeyB": {
+     "type": "string"
+    },
+    "userNameA": {
+     "type": "string"
+    },
+    "userNameB": {
+     "type": "string"
+    }
+   }
+  },
+  "UserpairCol": {
+   "id": "UserpairCol",
+   "type": "object",
+   "properties": {
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "userpairs": {
+     "type": "array",
+     "items": {
+      "$ref": "Userpair"
+     }
+    }
+   }
+  }
+ },
+ "methods": {
+  "rubymine.coupons.all": {
+   "id": "rubymine.coupons.all",
+   "allowGet": true,
+   "returns": {
+    "$ref": "CouponCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.coupons.delete": {
+   "id": "rubymine.coupons.delete",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.coupons.insert": {
+   "id": "rubymine.coupons.insert",
+   "parameters": {
+    "resource": {
+     "$ref": "Coupon"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Coupon"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.coupons.list": {
+   "id": "rubymine.coupons.list",
+   "allowGet": true,
+   "parameters": {
+    "userId": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "userId"
+   ],
+   "returns": {
+    "$ref": "CouponCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.coupons.redeem": {
+   "id": "rubymine.coupons.redeem",
+   "parameters": {
+    "resource": {
+     "$ref": "Coupon"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.coupons.use": {
+   "id": "rubymine.coupons.use",
+   "parameters": {
+    "resource": {
+     "$ref": "Coupon"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Coupon"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.gems.aall": {
+   "id": "rubymine.gems.aall",
+   "allowGet": true,
+   "returns": {
+    "$ref": "GemCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.gems.delete": {
+   "id": "rubymine.gems.delete",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.gems.edit": {
+   "id": "rubymine.gems.edit",
+   "parameters": {
+    "resource": {
+     "$ref": "Gem"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Gem"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.gems.insert": {
+   "id": "rubymine.gems.insert",
+   "parameters": {
+    "resource": {
+     "$ref": "Gem"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Gem"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.gems.list.mine": {
+   "id": "rubymine.gems.list.mine",
+   "allowGet": true,
+   "parameters": {
+    "rubymineId": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "rubymineId"
+   ],
+   "returns": {
+    "$ref": "GemCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.gems.list.zone": {
+   "id": "rubymine.gems.list.zone",
+   "allowGet": true,
+   "parameters": {
+    "rubyzoneId": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "rubyzoneId"
+   ],
+   "returns": {
+    "$ref": "GemCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.logs.all": {
+   "id": "rubymine.logs.all",
+   "allowGet": true,
+   "returns": {
+    "$ref": "LogCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.logs.insert": {
+   "id": "rubymine.logs.insert",
+   "parameters": {
+    "resource": {
+     "$ref": "Log"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.logs.list": {
+   "id": "rubymine.logs.list",
+   "allowGet": true,
+   "parameters": {
+    "after": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "after"
+   ],
+   "returns": {
+    "$ref": "LogCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.mineinfos.all": {
+   "id": "rubymine.mineinfos.all",
+   "allowGet": true,
+   "returns": {
+    "$ref": "MineInfoCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.mineinfos.get": {
+   "id": "rubymine.mineinfos.get",
+   "allowGet": true,
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "returns": {
+    "$ref": "MineInfo"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.mineinfos.insert": {
+   "id": "rubymine.mineinfos.insert",
+   "parameters": {
+    "resource": {
+     "$ref": "MineInfo"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "MineInfo"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.mineinfos.patch": {
+   "id": "rubymine.mineinfos.patch",
+   "supportsPatch": true,
+   "parameters": {
+    "address": {
+     "type": "string"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "lat": {
+     "type": "number",
+     "format": "double"
+    },
+    "lng": {
+     "type": "number",
+     "format": "double"
+    },
+    "menu": {
+     "type": "string"
+    },
+    "phone": {
+     "type": "string"
+    },
+    "price": {
+     "type": "string"
+    },
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "time": {
+     "type": "string"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "returns": {
+    "$ref": "MineInfo"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.mineinfos.update": {
+   "id": "rubymine.mineinfos.update",
+   "parameters": {
+    "resource": {
+     "$ref": "MineInfo"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "MineInfo"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.receipts.claim": {
+   "id": "rubymine.receipts.claim",
+   "parameters": {
+    "resource": {
+     "$ref": "Receipt"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.rubies.all": {
+   "id": "rubymine.rubies.all",
+   "allowGet": true,
+   "returns": {
+    "$ref": "RubyCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.rubies.claim": {
+   "id": "rubymine.rubies.claim",
+   "parameters": {
+    "resource": {
+     "$ref": "RubyCol"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.rubies.insert": {
+   "id": "rubymine.rubies.insert",
+   "parameters": {
+    "resource": {
+     "$ref": "Ruby"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Ruby"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.rubies.mine": {
+   "id": "rubymine.rubies.mine",
+   "parameters": {
+    "resource": {
+     "$ref": "Ruby"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "RubyCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.rubymines.all": {
+   "id": "rubymine.rubymines.all",
+   "allowGet": true,
+   "returns": {
+    "$ref": "RubymineCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.rubymines.delete": {
+   "id": "rubymine.rubymines.delete",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.rubymines.get": {
+   "id": "rubymine.rubymines.get",
+   "allowGet": true,
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "returns": {
+    "$ref": "Rubymine"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.rubymines.insert": {
+   "id": "rubymine.rubymines.insert",
+   "parameters": {
+    "resource": {
+     "$ref": "Rubymine"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Rubymine"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.rubymines.list": {
+   "id": "rubymine.rubymines.list",
+   "allowGet": true,
+   "parameters": {
+    "rubyzoneId": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "rubyzoneId"
+   ],
+   "returns": {
+    "$ref": "RubymineCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.rubymines.patch": {
+   "id": "rubymine.rubymines.patch",
+   "supportsPatch": true,
+   "parameters": {
+    "contents": {
+     "$ref": "Text"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "name": {
+     "type": "string"
+    },
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "ruby": {
+     "type": "number",
+     "format": "float"
+    },
+    "rubyzoneId": {
+     "type": "string",
+     "format": "int64"
+    },
+    "type": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "typeString": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number",
+     "format": "float"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "returns": {
+    "$ref": "Rubymine"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.rubymines.update": {
+   "id": "rubymine.rubymines.update",
+   "parameters": {
+    "resource": {
+     "$ref": "Rubymine"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Rubymine"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.rubyzones.all": {
+   "id": "rubymine.rubyzones.all",
+   "allowGet": true,
+   "returns": {
+    "$ref": "RubyzoneCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.rubyzones.insert": {
+   "id": "rubymine.rubyzones.insert",
+   "parameters": {
+    "resource": {
+     "$ref": "Rubyzone"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Rubyzone"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.rubyzones.list": {
+   "id": "rubymine.rubyzones.list",
+   "allowGet": true,
+   "returns": {
+    "$ref": "RubyzoneCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.userpairs.all": {
+   "id": "rubymine.userpairs.all",
+   "allowGet": true,
+   "returns": {
+    "$ref": "UserpairCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.userpairs.delete": {
+   "id": "rubymine.userpairs.delete",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.userpairs.list": {
+   "id": "rubymine.userpairs.list",
+   "allowGet": true,
+   "parameters": {
+    "userId": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "userId"
+   ],
+   "returns": {
+    "$ref": "UserpairCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.userpairs.pair": {
+   "id": "rubymine.userpairs.pair",
+   "parameters": {
+    "resource": {
+     "$ref": "Userpair"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.userpairs.update": {
+   "id": "rubymine.userpairs.update",
+   "parameters": {
+    "resource": {
+     "$ref": "Userpair"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Userpair"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.users.all": {
+   "id": "rubymine.users.all",
+   "allowGet": true,
+   "returns": {
+    "$ref": "UserCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.users.get": {
+   "id": "rubymine.users.get",
+   "allowGet": true,
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.users.insert": {
+   "id": "rubymine.users.insert",
+   "parameters": {
+    "resource": {
+     "$ref": "User"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.users.patch": {
+   "id": "rubymine.users.patch",
+   "supportsPatch": true,
+   "parameters": {
+    "bday": {
+     "type": "string",
+     "format": "int64"
+    },
+    "email": {
+     "type": "string"
+    },
+    "gender": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "imageKey": {
+     "type": "string"
+    },
+    "level": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "name": {
+     "type": "string"
+    },
+    "paired": {
+     "type": "boolean"
+    },
+    "password": {
+     "type": "string"
+    },
+    "phone": {
+     "type": "string"
+    },
+    "regId": {
+     "type": "string"
+    },
+    "resultCode": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "ruby": {
+     "type": "number",
+     "format": "float"
+    },
+    "socialId": {
+     "type": "string",
+     "format": "int64"
+    },
+    "state": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "type": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "verCode": {
+     "type": "integer",
+     "format": "int32"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.users.phone.insert": {
+   "id": "rubymine.users.phone.insert",
+   "parameters": {
+    "resource": {
+     "$ref": "User"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.users.phone.verify": {
+   "id": "rubymine.users.phone.verify",
+   "parameters": {
+    "resource": {
+     "$ref": "User"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.users.search": {
+   "id": "rubymine.users.search",
+   "allowGet": true,
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    },
+    "name": {
+     "type": "string",
+     "required": true
+    }
+   },
+   "parameterOrder": [
+    "id",
+    "name"
+   ],
+   "returns": {
+    "$ref": "UserCol"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.users.start.email": {
+   "id": "rubymine.users.start.email",
+   "parameters": {
+    "resource": {
+     "$ref": "User"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.users.start.facebook": {
+   "id": "rubymine.users.start.facebook",
+   "parameters": {
+    "resource": {
+     "$ref": "User"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.users.start.kakao": {
+   "id": "rubymine.users.start.kakao",
+   "parameters": {
+    "resource": {
+     "$ref": "User"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "rubymine.users.update": {
+   "id": "rubymine.users.update",
+   "parameters": {
+    "resource": {
+     "$ref": "User"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  }
+ }
+}

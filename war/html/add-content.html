@@ -1,0 +1,8 @@
+<div class="content-box">
+    <form action="${action}" id="content-edit-form-${index}" method="post" enctype="multipart/form-data">
+        <input class="content-input" type="file" name="image" id="content-edit-input-${index}" onchange="changeContentImage(${index}, this, 'content-edit-image-${index}')">
+    </form>
+    <div class="content-image-progress" id="content-edit-image-progress-${index}">uploading...</div>
+    <img class="content-image" id="content-edit-image-${index}">
+    <textarea class="content-text" id="content-edit-text-${index}"></textarea>
+</div>

@@ -1,0 +1,1674 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://ruby-mine.appspot.com/_ah/api",
+  "name" : "rubymine",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://ruby-mine.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "methods" : {
+    "rubymine.rubymines.list" : {
+      "path" : "rubymines",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Rubymines.list",
+      "request" : {
+        "parameters" : {
+          "rubyzoneId" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.rubymines.all" : {
+      "path" : "rubymine/all",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Rubymines.all",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.rubymines.delete" : {
+      "path" : "rubymine",
+      "httpMethod" : "delete",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Rubymines.delete",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "rubymine.rubymines.get" : {
+      "path" : "rubymine",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Rubymines.get",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.rubymines.update" : {
+      "path" : "rubymine",
+      "httpMethod" : "put",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Rubymines.update",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.rubymines.insert" : {
+      "path" : "rubymine",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Rubymines.insert",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.gems.aall" : {
+      "path" : "gem/all",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Gems.all",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.gems.list.mine" : {
+      "path" : "gems/mine",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Gems.listMine",
+      "request" : {
+        "parameters" : {
+          "rubymineId" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.gems.delete" : {
+      "path" : "gem",
+      "httpMethod" : "delete",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Gems.delete",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "rubymine.gems.list.zone" : {
+      "path" : "gems/zone",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Gems.listZone",
+      "request" : {
+        "parameters" : {
+          "rubyzoneId" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.gems.insert" : {
+      "path" : "gem",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Gems.insert",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.gems.edit" : {
+      "path" : "gem",
+      "httpMethod" : "put",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Gems.edit",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.rubies.claim" : {
+      "path" : "ruby/claim",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Rubies.claim",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.rubies.insert" : {
+      "path" : "ruby",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Rubies.insert",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.rubies.mine" : {
+      "path" : "ruby/mine",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Rubies.mine",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.rubies.all" : {
+      "path" : "ruby/all",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Rubies.all",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.userpairs.update" : {
+      "path" : "userpair",
+      "httpMethod" : "put",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Userpairs.update",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.userpairs.all" : {
+      "path" : "userpair/all",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Userpairs.all",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.userpairs.pair" : {
+      "path" : "userpair/pair",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Userpairs.pair",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "rubymine.userpairs.delete" : {
+      "path" : "userpair",
+      "httpMethod" : "delete",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Userpairs.delete",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "rubymine.userpairs.list" : {
+      "path" : "userpairs",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Userpairs.list",
+      "request" : {
+        "parameters" : {
+          "userId" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.receipts.claim" : {
+      "path" : "receipt/claim",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Receipts.claim",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.users.start.kakao" : {
+      "path" : "user/start/kakao",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Users.startKakao",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.users.update" : {
+      "path" : "user",
+      "httpMethod" : "put",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Users.update",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.users.insert" : {
+      "path" : "user",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Users.insert",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.users.phone.insert" : {
+      "path" : "user/phone/insert",
+      "httpMethod" : "put",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Users.phoneInsert",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.users.start.facebook" : {
+      "path" : "user/start/facebook",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Users.startFacebook",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.users.phone.verify" : {
+      "path" : "user/phone/verify",
+      "httpMethod" : "put",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Users.phoneVerify",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.users.search" : {
+      "path" : "user/search",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Users.search",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          },
+          "name" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.users.all" : {
+      "path" : "user/all",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Users.all",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.users.start.email" : {
+      "path" : "user/start/email",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Users.startEmail",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.users.get" : {
+      "path" : "user",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Users.get",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.logs.all" : {
+      "path" : "log/all",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Logs.all",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.logs.insert" : {
+      "path" : "log",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Logs.insert",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "rubymine.logs.list" : {
+      "path" : "logs",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Logs.list",
+      "request" : {
+        "parameters" : {
+          "after" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.mineinfos.all" : {
+      "path" : "mineInfo/all",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.MineInfos.all",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.mineinfos.get" : {
+      "path" : "mineinfo",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.MineInfos.get",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.mineinfos.update" : {
+      "path" : "mineinfo",
+      "httpMethod" : "put",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.MineInfos.update",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.mineinfos.insert" : {
+      "path" : "mineinfo",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.MineInfos.insert",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.rubyzones.list" : {
+      "path" : "rubyzones",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Rubyzones.list",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.rubyzones.insert" : {
+      "path" : "rubyzone",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Rubyzones.insert",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.rubyzones.all" : {
+      "path" : "rubyzone/all",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Rubyzones.all",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.coupons.use" : {
+      "path" : "coupon/use",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Coupons.use",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.coupons.all" : {
+      "path" : "coupon/all",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Coupons.all",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.coupons.list" : {
+      "path" : "coupons",
+      "httpMethod" : "get",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Coupons.list",
+      "request" : {
+        "parameters" : {
+          "userId" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.coupons.delete" : {
+      "path" : "coupon",
+      "httpMethod" : "delete",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Coupons.delete",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "rubymine.coupons.redeem" : {
+      "path" : "coupon/redeem",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Coupons.redeem",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "rubymine.coupons.insert" : {
+      "path" : "coupon",
+      "httpMethod" : "post",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "AIzaSyAUV1lmiV96hRdy75oc5Is8Q7U0J6eJIX4", "AIzaSyAaAWyfReOQP-3Uq0UYe8m-eDFZB3ewEyU", "AIzaSyDjueGka7AwTctKmB2D2FRX3HFoG3EThiE", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jaydi.ruby.apis.Coupons.insert",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "RubymineCol" : {
+        "id" : "RubymineCol",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "rubymines" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Rubymine"
+            }
+          }
+        }
+      },
+      "Rubymine" : {
+        "id" : "Rubymine",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "rubyzoneId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "contents" : {
+            "$ref" : "Text"
+          },
+          "type" : {
+            "type" : "integer"
+          },
+          "typeString" : {
+            "type" : "string"
+          },
+          "ruby" : {
+            "type" : "number",
+            "format" : "float"
+          },
+          "value" : {
+            "type" : "number",
+            "format" : "float"
+          }
+        }
+      },
+      "Text" : {
+        "id" : "Text",
+        "type" : "object",
+        "properties" : {
+          "value" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GemCol" : {
+        "id" : "GemCol",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "gems" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Gem"
+            }
+          }
+        }
+      },
+      "Gem" : {
+        "id" : "Gem",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "rubymineId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "rubymineName" : {
+            "type" : "string"
+          },
+          "imageKey" : {
+            "type" : "string"
+          },
+          "desc" : {
+            "type" : "string"
+          },
+          "type" : {
+            "type" : "integer"
+          },
+          "value" : {
+            "type" : "integer"
+          },
+          "ea" : {
+            "type" : "integer"
+          }
+        }
+      },
+      "RubyCol" : {
+        "id" : "RubyCol",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "rubies" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Ruby"
+            }
+          },
+          "planter" : {
+            "$ref" : "Rubymine"
+          },
+          "givers" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Rubymine"
+            }
+          }
+        }
+      },
+      "Ruby" : {
+        "id" : "Ruby",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "userId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "giverId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "planterId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "value" : {
+            "type" : "number",
+            "format" : "float"
+          },
+          "createdAt" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "event" : {
+            "type" : "integer"
+          }
+        }
+      },
+      "User" : {
+        "id" : "User",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "regId" : {
+            "type" : "string"
+          },
+          "socialId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "phone" : {
+            "type" : "string"
+          },
+          "email" : {
+            "type" : "string"
+          },
+          "password" : {
+            "type" : "string"
+          },
+          "imageKey" : {
+            "type" : "string"
+          },
+          "bday" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "gender" : {
+            "type" : "integer"
+          },
+          "level" : {
+            "type" : "integer"
+          },
+          "ruby" : {
+            "type" : "number",
+            "format" : "float"
+          },
+          "type" : {
+            "type" : "integer"
+          },
+          "state" : {
+            "type" : "integer"
+          },
+          "verCode" : {
+            "type" : "integer"
+          },
+          "paired" : {
+            "type" : "boolean"
+          }
+        }
+      },
+      "Userpair" : {
+        "id" : "Userpair",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "userIdA" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "userIdB" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "userNameA" : {
+            "type" : "string"
+          },
+          "userNameB" : {
+            "type" : "string"
+          },
+          "userImageKeyA" : {
+            "type" : "string"
+          },
+          "userImageKeyB" : {
+            "type" : "string"
+          },
+          "state" : {
+            "type" : "integer"
+          }
+        }
+      },
+      "UserpairCol" : {
+        "id" : "UserpairCol",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "userpairs" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Userpair"
+            }
+          }
+        }
+      },
+      "Receipt" : {
+        "id" : "Receipt",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "shopId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "userId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "price" : {
+            "type" : "integer"
+          },
+          "menus" : {
+            "type" : "string"
+          },
+          "createdAt" : {
+            "type" : "string",
+            "format" : "int64"
+          }
+        }
+      },
+      "UserCol" : {
+        "id" : "UserCol",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "users" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "User"
+            }
+          }
+        }
+      },
+      "LogCol" : {
+        "id" : "LogCol",
+        "type" : "object",
+        "properties" : {
+          "logs" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Log"
+            }
+          }
+        }
+      },
+      "Log" : {
+        "id" : "Log",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "kind" : {
+            "type" : "integer"
+          },
+          "userId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "targetId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "refer" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "type" : {
+            "type" : "integer"
+          },
+          "createdAt" : {
+            "type" : "string",
+            "format" : "int64"
+          }
+        }
+      },
+      "MineInfoCol" : {
+        "id" : "MineInfoCol",
+        "type" : "object",
+        "properties" : {
+          "mineInfos" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "MineInfo"
+            }
+          }
+        }
+      },
+      "MineInfo" : {
+        "id" : "MineInfo",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "address" : {
+            "type" : "string"
+          },
+          "menu" : {
+            "type" : "string"
+          },
+          "time" : {
+            "type" : "string"
+          },
+          "price" : {
+            "type" : "string"
+          },
+          "phone" : {
+            "type" : "string"
+          },
+          "lat" : {
+            "type" : "number"
+          },
+          "lng" : {
+            "type" : "number"
+          }
+        }
+      },
+      "RubyzoneCol" : {
+        "id" : "RubyzoneCol",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "rubyzones" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Rubyzone"
+            }
+          }
+        }
+      },
+      "Rubyzone" : {
+        "id" : "Rubyzone",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "lat" : {
+            "type" : "number"
+          },
+          "lng" : {
+            "type" : "number"
+          },
+          "range" : {
+            "type" : "integer"
+          }
+        }
+      },
+      "Coupon" : {
+        "id" : "Coupon",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "userId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "gemId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "rubymineName" : {
+            "type" : "string"
+          },
+          "imageKey" : {
+            "type" : "string"
+          },
+          "desc" : {
+            "type" : "string"
+          },
+          "expirationDate" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "state" : {
+            "type" : "integer"
+          }
+        }
+      },
+      "CouponCol" : {
+        "id" : "CouponCol",
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "type" : "integer"
+          },
+          "coupons" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Coupon"
+            }
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.jaydi.ruby.apis.Rubymines.list" : {
+        "response" : {
+          "$ref" : "RubymineCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Rubymines.all" : {
+        "response" : {
+          "$ref" : "RubymineCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Rubymines.delete" : {
+      },
+      "com.jaydi.ruby.apis.Rubymines.get" : {
+        "response" : {
+          "$ref" : "Rubymine"
+        }
+      },
+      "com.jaydi.ruby.apis.Rubymines.update" : {
+        "request" : {
+          "$ref" : "Rubymine"
+        },
+        "response" : {
+          "$ref" : "Rubymine"
+        }
+      },
+      "com.jaydi.ruby.apis.Rubymines.insert" : {
+        "request" : {
+          "$ref" : "Rubymine"
+        },
+        "response" : {
+          "$ref" : "Rubymine"
+        }
+      },
+      "com.jaydi.ruby.apis.Gems.all" : {
+        "response" : {
+          "$ref" : "GemCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Gems.listMine" : {
+        "response" : {
+          "$ref" : "GemCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Gems.delete" : {
+      },
+      "com.jaydi.ruby.apis.Gems.listZone" : {
+        "response" : {
+          "$ref" : "GemCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Gems.insert" : {
+        "request" : {
+          "$ref" : "Gem"
+        },
+        "response" : {
+          "$ref" : "Gem"
+        }
+      },
+      "com.jaydi.ruby.apis.Gems.edit" : {
+        "request" : {
+          "$ref" : "Gem"
+        },
+        "response" : {
+          "$ref" : "Gem"
+        }
+      },
+      "com.jaydi.ruby.apis.Rubies.claim" : {
+        "request" : {
+          "$ref" : "RubyCol"
+        },
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.jaydi.ruby.apis.Rubies.insert" : {
+        "request" : {
+          "$ref" : "Ruby"
+        },
+        "response" : {
+          "$ref" : "Ruby"
+        }
+      },
+      "com.jaydi.ruby.apis.Rubies.mine" : {
+        "request" : {
+          "$ref" : "Ruby"
+        },
+        "response" : {
+          "$ref" : "RubyCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Rubies.all" : {
+        "response" : {
+          "$ref" : "RubyCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Userpairs.update" : {
+        "request" : {
+          "$ref" : "Userpair"
+        },
+        "response" : {
+          "$ref" : "Userpair"
+        }
+      },
+      "com.jaydi.ruby.apis.Userpairs.all" : {
+        "response" : {
+          "$ref" : "UserpairCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Userpairs.pair" : {
+        "request" : {
+          "$ref" : "Userpair"
+        }
+      },
+      "com.jaydi.ruby.apis.Userpairs.delete" : {
+      },
+      "com.jaydi.ruby.apis.Userpairs.list" : {
+        "response" : {
+          "$ref" : "UserpairCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Receipts.claim" : {
+        "request" : {
+          "$ref" : "Receipt"
+        },
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.jaydi.ruby.apis.Users.startKakao" : {
+        "request" : {
+          "$ref" : "User"
+        },
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.jaydi.ruby.apis.Users.update" : {
+        "request" : {
+          "$ref" : "User"
+        },
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.jaydi.ruby.apis.Users.insert" : {
+        "request" : {
+          "$ref" : "User"
+        },
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.jaydi.ruby.apis.Users.phoneInsert" : {
+        "request" : {
+          "$ref" : "User"
+        },
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.jaydi.ruby.apis.Users.startFacebook" : {
+        "request" : {
+          "$ref" : "User"
+        },
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.jaydi.ruby.apis.Users.phoneVerify" : {
+        "request" : {
+          "$ref" : "User"
+        },
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.jaydi.ruby.apis.Users.search" : {
+        "response" : {
+          "$ref" : "UserCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Users.all" : {
+        "response" : {
+          "$ref" : "UserCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Users.startEmail" : {
+        "request" : {
+          "$ref" : "User"
+        },
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.jaydi.ruby.apis.Users.get" : {
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.jaydi.ruby.apis.Logs.all" : {
+        "response" : {
+          "$ref" : "LogCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Logs.insert" : {
+        "request" : {
+          "$ref" : "Log"
+        }
+      },
+      "com.jaydi.ruby.apis.Logs.list" : {
+        "response" : {
+          "$ref" : "LogCol"
+        }
+      },
+      "com.jaydi.ruby.apis.MineInfos.all" : {
+        "response" : {
+          "$ref" : "MineInfoCol"
+        }
+      },
+      "com.jaydi.ruby.apis.MineInfos.get" : {
+        "response" : {
+          "$ref" : "MineInfo"
+        }
+      },
+      "com.jaydi.ruby.apis.MineInfos.update" : {
+        "request" : {
+          "$ref" : "MineInfo"
+        },
+        "response" : {
+          "$ref" : "MineInfo"
+        }
+      },
+      "com.jaydi.ruby.apis.MineInfos.insert" : {
+        "request" : {
+          "$ref" : "MineInfo"
+        },
+        "response" : {
+          "$ref" : "MineInfo"
+        }
+      },
+      "com.jaydi.ruby.apis.Rubyzones.list" : {
+        "response" : {
+          "$ref" : "RubyzoneCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Rubyzones.insert" : {
+        "request" : {
+          "$ref" : "Rubyzone"
+        },
+        "response" : {
+          "$ref" : "Rubyzone"
+        }
+      },
+      "com.jaydi.ruby.apis.Rubyzones.all" : {
+        "response" : {
+          "$ref" : "RubyzoneCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Coupons.use" : {
+        "request" : {
+          "$ref" : "Coupon"
+        },
+        "response" : {
+          "$ref" : "Coupon"
+        }
+      },
+      "com.jaydi.ruby.apis.Coupons.all" : {
+        "response" : {
+          "$ref" : "CouponCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Coupons.list" : {
+        "response" : {
+          "$ref" : "CouponCol"
+        }
+      },
+      "com.jaydi.ruby.apis.Coupons.delete" : {
+      },
+      "com.jaydi.ruby.apis.Coupons.redeem" : {
+        "request" : {
+          "$ref" : "Coupon"
+        },
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.jaydi.ruby.apis.Coupons.insert" : {
+        "request" : {
+          "$ref" : "Coupon"
+        },
+        "response" : {
+          "$ref" : "Coupon"
+        }
+      }
+    }
+  }
+}

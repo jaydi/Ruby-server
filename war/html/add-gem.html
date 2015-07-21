@@ -1,0 +1,11 @@
+<div class="gem-box">
+    <form action="${action}" id="gem-edit-form-${index}" method="post" enctype="multipart/form-data">
+        <input class="gem-input" type="file" name="image" id="gem-edit-input-${index}" onchange="addGemImage(${index}, this, 'gem-edit-image-${index}')">
+    </form>
+    <div class="gem-image-progress" id="gem-edit-image-progress-${index}">uploading...</div>
+    <img class="gem-image" id="gem-edit-image-${index}" />
+    <input type="text" class="gem-text" id="gem-edit-name-${index}" placeholder="name" />
+    <input type="number" class="gem-text" id="gem-edit-value-${index}" placeholder="ruby value" />
+    <input type="number" class="gem-text" id="gem-edit-ea-${index}" placeholder="E/A" />
+    <textarea class="gem-textarea" id="gem-edit-desc-${index}" placeholder="description"></textarea>
+</div>

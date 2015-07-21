@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<servlet-class>com.google.api.server.spi.SystemServiceServlet
+		</servlet-class>
+		<init-param>
+			<param-name>services</param-name>
+			<param-value>com.jaydi.ruby.apis.Coupons,com.jaydi.ruby.apis.Gems,com.jaydi.ruby.apis.Logs,com.jaydi.ruby.apis.MineInfos,com.jaydi.ruby.apis.Receipts,com.jaydi.ruby.apis.Rubies,com.jaydi.ruby.apis.Rubymines,com.jaydi.ruby.apis.Rubyzones,com.jaydi.ruby.apis.Userpairs,com.jaydi.ruby.apis.Users</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ImageServlet</servlet-name>
+		<servlet-class>com.jaydi.ruby.apis.servlets.ImageServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ReceiptServlet</servlet-name>
+		<servlet-class>com.jaydi.ruby.apis.servlets.ReceiptServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>UpdateUserLevelTask</servlet-name>
+		<servlet-class>com.jaydi.ruby.apis.tasks.UpdateUserLevelTask
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>UpdateUserInfoTask</servlet-name>
+		<servlet-class>com.jaydi.ruby.apis.tasks.UpdateUserInfoTask
+		</servlet-class>
+		
+	</servlet>
+	
+	<servlet>
+		<servlet-name>InsertVisitEventTask</servlet-name>
+		<servlet-class>com.jaydi.ruby.apis.tasks.InsertVisitEventTask
+		</servlet-class>
+		
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CheckVisitEventTask</servlet-name>
+		<servlet-class>com.jaydi.ruby.apis.tasks.CheckVisitEventTask
+		</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>SendEventTask</servlet-name>
+		<servlet-class>com.jaydi.ruby.apis.tasks.SendEventTask
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ServerCheckCron</servlet-name>
+		<servlet-class>com.jaydi.ruby.apis.crons.ServerCheckCron
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ScheduleServiceCron</servlet-name>
+		<servlet-class>com.jaydi.ruby.apis.crons.ScheduleServiceCron
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<url-pattern>/_ah/spi/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ImageServlet</servlet-name>
+		<url-pattern>/image</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ReceiptServlet</servlet-name>
+		<url-pattern>/receipt</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>UpdateUserLevelTask</servlet-name>
+		<url-pattern>/update_user_level_task</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>UpdateUserInfoTask</servlet-name>
+		<url-pattern>/update_user_info_task</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>InsertVisitEventTask</servlet-name>
+		<url-pattern>/insert_visit_event_task</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>CheckVisitEventTask</servlet-name>
+		<url-pattern>/check_visit_event_task</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>SendEventTask</servlet-name>
+		<url-pattern>/send_event_task</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ServerCheckCron</servlet-name>
+		<url-pattern>/server_check_cron</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ScheduleServiceCron</servlet-name>
+		<url-pattern>/schedule_service_cron</url-pattern>
+	</servlet-mapping>
+
+	<!-- Root application must use HTTPS -->
+	<security-constraint>
+		<web-resource-collection>
+			<url-pattern>/</url-pattern>
+		</web-resource-collection>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+</web-app>

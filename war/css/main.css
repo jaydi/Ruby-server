@@ -1,0 +1,232 @@
+html, body, div, section {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;   
+}
+
+#mine-container {
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#mine-header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    width: 500px;
+    height: 40px;
+}
+
+#select-zone {
+    float: left;
+    width: 200px;
+}
+
+#select-mine {
+    float: left;
+    width: 200px;
+    margin-left: 20px;
+}
+
+.select_progress {
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+
+#mine-viewer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #EEE;
+}
+
+#mine-viewer .button {
+    margin:0px 5px 0px 5px;
+    color:#a0a0d0;
+    cursor:pointer;
+}
+
+.mine-image {
+    width:360px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.mine-text {
+    width: 360px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.mine-button-group {
+    width:360px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5px;
+    padding-bottom:10px;
+    border-bottom:1px solid #c0c0c0;
+}
+
+
+#mine-contents-add-first {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display:none;
+}
+
+#mine-viewer textarea {
+    width:360px;
+    height:100px;
+}
+
+#mine-gem-viewer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #EEE;
+}
+
+#mine-contents-edit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+}
+
+#mine-gem-edit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mine-editor {
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #EEE;
+}
+
+#mine-editor2 {
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #EEE;
+}
+
+#mine-gem-editor {
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #EEE;
+}
+
+#mine-editor-view {
+    margin-bottom: 10px;
+}
+
+#mine-gem-editor-view {
+    margin-bottom: 10px;
+}
+
+.content-box {
+    width:360px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.content-input {
+    position:absolute;
+    width:360px;
+    height:270px;
+    cursor:pointer;
+    opacity:0;
+}
+
+.content-image-progress {
+    position:absolute;
+    display:none;
+}
+
+.content-image {
+    width:360px;
+    height:270px;
+}
+
+.content-text {
+    width:360px;
+    height:135px;
+}
+
+.gem-image {
+    float: left;
+    width: 180px;
+    height: 240px;
+}
+
+.gem-input {
+    position: absolute;
+    width: 180px;
+    height: 240px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.gem-image-progress {
+    display: none;
+    position: absolute;
+    width: 180px;
+    height: 240px;
+}
+
+.gem-text {
+    float: left;
+    width: 180px;
+}
+
+.gem-textarea {
+    float: left;
+    width: 180px;
+}
+
+.gem-box {
+    width: 360px;
+    height: 240px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gem-remove {
+    cursor:pointer;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+}
+
+.gem-image-input {
+    position: absolute;
+    width: 180px;
+    height: 240px;
+    cursor: pointer;
+    opacity: 0;
+}
